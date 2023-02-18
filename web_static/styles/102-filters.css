@@ -1,132 +1,128 @@
-.places {
-  margin-bottom: 200px;
+@charset "UTF-8";
+/** Holberton Practice Styles
+ * ------ Filters
+ */
+
+.container .filters {
+	height: 70px;
+	background-color: #FFFFFF;
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	z-index: 2;
+	position: relative;
 }
-.places h1 {
-  font-size: 30px;
-  padding-left: 2%;
-  padding-right: 2%;
+
+.container .filters .locations {
+	width: 25%;
+	border-right: 1px solid #DDDDDD;
 }
-.places article {
-  width: 390px;
-  padding: 20px;
-  margin: 20px;
-  border: #ff5a5f 1px solid;
-  border-radius: 4px;
-  position: relative;
+
+.container .filters .amenities {
+	width: 25%;
 }
-.places article h2 {
-  font-size: 30px;
-  text-align: center;
+
+.container .filters button {
+	font-size: 18px;
+	background-color: #FF5A5F;
+	height: 60%;
+	width: 20%;
+	border: none;
+	border-radius: 4px;
+	margin: auto 30px auto auto;
 }
-.places .wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
+
+.container .filters button:hover {
+	opacity: 0.9;
 }
-.places .price_by_night {
-  color: #ff5a5f;
-  border: #ff5a5f 4px solid;
-  border-radius: 50%;
-  min-width: 60px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 6px;
-  right: 6px;
-  height: 60px;
-  font-size: 30px;
+
+/**
+ * ------ HEADERS
+ */
+
+.container .filters h2 {
+	font-size: 16px;
+	margin: 10px 0 5px 0;
 }
-.places .information {
-  height: 80px;
-  border-top: #dddddd 1px solid;
-  border-bottom: #dddddd 1px solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.container .filters h3 {
+	font-weight: 600;
+	margin: 12px 0 4px 40px;
 }
-.places .information .max_guest,
-.places .information .number_bathrooms,
-.places .information .number_rooms {
-  width: 100px;
+
+.container .filters h4 {
+	font-weight: 400;
+	font-size: 14px;
+	margin: 7px 0 3px 40px;
 }
-.places .information .max_guest_img {
-  background-image: url(../images/icon_group.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 45px;
+
+/**
+ * ------ POPOVER
+ */
+
+.container .filters .locations:hover .popover {
+	display: list-item;
 }
-.places .information .number_rooms_img {
-  background-image: url(../images/icon_bed.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 45px;
+
+.container .filters .amenities:hover .popover {
+	display: list-item;
 }
-.places .information .number_bathrooms_img {
-  background-image: url(../images/icon_bath.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 45px;
+
+.container .filters .popover {
+	display: none;
+	list-style-type: none;
+	background-color: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px;
+	padding: 30px 40px 40px 30px;
+	margin: 15px -1px 0 -1px;
 }
-.places .information p {
-  text-align: center;
-  margin: 0;
+
+.container .filters .popover ul {
+	list-style-type: none;
+	padding-left: 20px;
 }
-.places .amenities {
-  margin-top: 40px;
-  width: 100%;
+
+.container .filters .popover li {
+	margin: 5px 0 5px 0;
 }
-.places .amenities h2 {
-  font-size: 16px;
-  text-align: left;
-  border-bottom: #dddddd 1px solid;
-  padding-bottom: 12px;
+
+
+@media screen and (min-width: 1800px) {
+
+	.container .filters {
+		min-height: 200px;
+	}
+
 }
-.places .amenities .a1 {
-  background: url("../images/icon_tv.png") 0 100% no-repeat;
-  background-size: 25px 25px; 
-  padding-left: 35px;
-  height: 25px;
-}
-.places .amenities .a2 {
-  background: url("../images/icon_wifi.png") 0 100% no-repeat;
-  background-size: 25px 25px; 
-  padding-left: 35px;
-  height: 25px;
-}
-.places .amenities .a3 {
-  background: url("../images/icon_pets.png") 0 100% no-repeat;
-  background-size: 25px 25px; 
-  padding-left: 35px;
-  height: 25px;
-}
-.places .amenities p {
-  padding-top: 5px;
-}
-.places .reviews {
-  margin-top: 40px;
-}
-.places .reviews h2 {
-  font-size: 16px;
-  text-align: left;
-  border-bottom: #dddddd 1px solid;
-  padding-bottom: 12px;
-}
-.places .reviews h3 {
-  font-size: 14px;
-  margin-bottom: 0;
-}
-.places .reviews p {
-  font-size: 12px;
-  margin-top: 1px;
-}
-.places article ul {
-  padding: 0;
-  list-style-type: none;
-}
-@media screen and (max-width: 355px){
-  .places article {
-    width: 220px;
-  }
+
+@media screen and (max-width: 600px) {
+
+	.container .filters {
+		flex-direction: column;
+		height: auto;
+		width: 90%;
+		margin: auto;
+	}
+
+	.container .filters .locations {
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	.container .filters .locations,
+	.container .filters .amenities {
+		width: 100%;
+		border-right: none;
+		border-bottom: 1px solid #DDDDDD;
+	}
+
+	.container .filters button {
+		width: 80%;
+		margin: 5px auto;
+	}
+
 }
